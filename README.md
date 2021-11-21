@@ -1,6 +1,7 @@
 # Grafana data source plugin for Azure IoT Central
 This sample plugin enables IoT Central as a Grafana data source. By leveraging the new [IoT Central query API](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-query-with-rest-api), you can use Grafana dashboards to visualize and analyze your IoT data. 
 
+![alt-text](./assets/full-dashboard.gif)
 ## Setup instructions
 1. Clone this repository in the local directory where you want Grafana to look for local plugins.
 2. Set up Grafana to [load plugins from your local directory](https://grafana.com/tutorials/build-a-data-source-plugin/#set-up-your-environment).
@@ -15,12 +16,15 @@ yarn install
 yarn dev
 ```
 5. Restart your Grafana server. The Azure IoT Central plugin should now be available under data sources:
+
 ![alt-text](./assets/add-data-source.gif)
+
 6. Configure the data source with you IoT Central application URL and an API token (API tokens can be created in the Administration section of you IoT Central application).
 
 ## Querying data
 To start building dashboards with the newly added IoT Central data source, simply provide the desired query. The query syntax follows the [IoT Central query API](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-query-with-rest-api).
-![alt-text](./assets/query-data.gif).
+
+![alt-text](./assets/query-data.gif)
 
 ### Time range
 By default, the plugin will override the time window of your query with the time range configured in the dashboard.
@@ -30,6 +34,7 @@ If the timestamp field is being project, the plugin will automatically return it
 
 ## Time series
 Query results are returned as a single data frame. To easily split the data into multiple series, use the `Prepare time series > Multi-frame time series` transformation available under the `Transformations` tab.
+
 ![alt-text](./assets/time-series-transformation.gif).
 
 ## Complex values
