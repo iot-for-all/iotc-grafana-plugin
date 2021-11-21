@@ -32,10 +32,10 @@ By default, the plugin will override the time window of your query with the time
 ### Timestamp field
 If the timestamp field is being project, the plugin will automatically return it in the correct time format expected by Grafana. To convert other custom timestamp fields to the proper time format, use the `Convert field type` transformation available in the `Transform` tab.
 
-## Time series
+### Time series
 Query results are returned as a single data frame. To easily split the data into multiple series, use the `Prepare time series > Multi-frame time series` transformation available under the `Transformations` tab.
 
 ![alt-text](./assets/time-series-transformation.gif).
 
-## Complex values
+### Complex values
 By default, the plugin will flatten any complex values returned in the query result set. For instance, if the query returns a field `location: { lat: 47.643567, lon: -122.129685}`, the result set will contain `location.lat: 47.643567` and `location.lon: -122.129685`.
