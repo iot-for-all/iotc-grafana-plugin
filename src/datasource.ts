@@ -19,6 +19,7 @@ export class DataSource extends DataSourceApi<IoTCQuery, IoTCDataSourceOptions> 
   constructor(instanceSettings: DataSourceInstanceSettings<IoTCDataSourceOptions>) {
     super(instanceSettings);
     this.appUrl = instanceSettings.jsonData.appUrl;
+    this.appUrl = this.appUrl?.replace(/https?:\/\//gi, ''); // Remove the protocol prefix
     this.apiToken = instanceSettings.jsonData.apiToken;
   }
 

@@ -28,9 +28,9 @@ export function getTsFieldName(query: string) {
     } else if (tsAttributeAliasMatch) {
       return tsAttributeAliasMatch.groups!.timeField;
     } else if (tsAggMatch) {
-      return `${tsAggMatch.groups!.aggregator}_$ts`;
+      return `${tsAggMatch.groups!.aggregator.toLowerCase()}_$ts`;
     } else if (tsAggAliasMatch) {
-      return `${tsAggAliasMatch.groups!.aggregator}_${tsAggAliasMatch.groups!.timeField}`;
+      return `${tsAggAliasMatch.groups!.aggregator.toLowerCase()}_${tsAggAliasMatch.groups!.timeField}`;
     }
   }
 

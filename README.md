@@ -19,7 +19,7 @@ yarn dev
 
 ![alt-text](./assets/add-data-source.gif)
 
-6. Configure the data source with you IoT Central application URL and an API token (API tokens can be created in the Administration section of you IoT Central application).
+6. Configure the data source with you IoT Central application URL and an API token. The application URL can be found under `Administration > Your application` (e.g, `<myapp>.azureiotcentral.com`). API tokens can be created in the `Administration > API tokens` section of you IoT Central application.
 
 ## Querying data
 To start building dashboards with the newly added IoT Central data source, simply provide the desired query. The query syntax follows the [IoT Central query API](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-query-with-rest-api).
